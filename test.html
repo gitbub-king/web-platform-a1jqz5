@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <title>前端入门课程</title>
+  <style type="text/css">
+    .a{
+      float:left;
+    }
+    .subbtn{
+      background:#FFD103;
+      border: none;
+      color: black;
+      padding: 4px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    table{
+      border-collapse:collapse;
+    }
+    table,td,th{
+      border:1px solid black;
+    }
+    .thead1{
+      background:#FFD103;
+    }
+    .text{
+      font-weight:bold;
+      font-size:18px;
+    }
+    ul.pagetype {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+  .pagestyle{
+    float:right;
+  }
+
+    ul.pagetype li {display: inline;}
+
+    ul.pagetype li a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+
+    ul.pagetype li a:hover:not(.active) {background-color: #ddd;}
+    
+  </style>
+  <body>
+    <img src="//s0.meituan.net/bs/fe-web-meituan/10afbf1/img/logo.png" />
+    <h1>前端入门</h1>
+    <div id="dataFiltering" class="dataFilterbox">
+      <div class="text">
+        数据筛选
+      </div>
+      <div id="box1" class="a">
+        <span>机构：</span>
+        <input type="text" />&nbsp;&nbsp;
+      </div>
+      <div id="box2" class="a">
+        <span>操作人：</span>
+        <input type="text" />&nbsp;&nbsp;
+      </div>
+      <div id="box3">
+        <button type="submit" title="搜索" class="subbtn">搜索</button>
+        <button type="reset" title="重置" class="resbtn">重置</button>
+      </div>
+    </div>
+    <br/>
+    <div class="text">
+      数据表格
+    </div>
+    <div id="testTable">
+      <table width="90%" align="center" class=table1>  
+        <thead >
+          <tr align="center" class="thead1" >  
+            <th>序号</th>
+            <th>编码</th>
+            <th>机构</th>
+            <th>操作人</th>
+            <th>操作时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr align="center">
+            <td>1</td>
+            <td>P001</td>
+            <td>西南配送中心</td>
+            <td>机器人001</td>
+            <td>2021年10月11日11:53:43</td>
+          </tr>  
+          <tr align="center">
+            <td>2</td>
+            <td>P002</td>
+            <td>西南配送中心</td>
+            <td>机器人002</td>
+            <td>2021年10月11日12:53:43</td>
+          </tr>
+          <tr align="center">
+            <td>3</td>
+            <td>P002</td>
+            <td>西南配送中心</td>
+            <td>机器人003</td>
+            <td>2021年10月11日13:53:43</td>
+          </tr>
+        </tbody>
+      <table>
+    </div>
+    <br/>
+    
+    <div id="pagesTwo" class="pagestyle">
+      <ul class="pagetype">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+      </ul>
+    </div>
+
+
+  </body>
+</html>
