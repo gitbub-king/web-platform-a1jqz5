@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <title>2021年10月11日作业</title>
+  <style type="text/css">
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      background-color: #f0f0f0;
+    }
+    .toppart {
+      width: 100%;
+      height: auto;
+      margin: 0px 0px 5px 0px;
+      display: flex;
+      background-color: #fff;
+    }
+    .topitemone {
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 60px;
+      padding: 0px 50px;
+    }
+    .topitemtwo {
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 60px;
+      padding: 0px 50px;
+    }
+    .topitemthree {
+      font-size: 16px;
+      line-height: 60px;
+      padding: 0px 50px;
+    }
+
+    .leftright {
+      display: flex;
+      height: 88%;
+    }
+
+    .leftpart {
+      width: 220px;
+      background-color: #fff;
+      margin: 0px 10px 0px 0px;
+    }
+
+    .lefttext {
+      font-weight: bold;
+      font-size: 22px;
+      padding: 5px 0px 15px 8px;
+    }
+
+    ul.leftmenu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 220px;
+      font-weight: bold;
+    }
+
+    ul.leftmenu li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    ul.leftmenu li a.active {
+      background-color: #ffd103;
+      color: black;
+    }
+
+    ul.leftmenu li a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+
+    .rightpart {
+      width: 100%;
+      background-color: #fff;
+      padding: 0px 10px;
+    }
+    .floatleft {
+      float: left;
+    }
+    .subbtn {
+      height: 34px;
+      background: #ffd103;
+      border: none;
+      color: black;
+      padding: 4px 14px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .resbtn {
+      height: 34px;
+      background: #f0f0f0;
+      border: none;
+      color: black;
+      padding: 4px 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .tableborder {
+      width: 100%;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+    .tablebordersize td {
+      padding: 10px;
+      border: 1px solid black;
+    }
+    .tablebordersize th {
+      padding: 10px;
+      border: 1px solid black;
+    }
+    .thead1 {
+      background: #ffd103;
+    }
+    .text {
+      clear: both;
+      font-weight: bold;
+      font-size: 24px;
+      margin: 10px 0px 10px 0px;
+    }
+    .mechanismbox {
+      padding: 0px 0px 0px 12px;
+      border-color: #d9d9d9;
+      height: 30px;
+      margin: 0px 10px 0px 0px;
+      border-radius: 4px;
+    }
+    .operatorbox {
+      border-color: #d9d9d9;
+      height: 30px;
+      margin: 0px 10px 0px 0px;
+      border-radius: 4px;
+    }
+
+    .pagestyle {
+      text-align: right;
+
+      margin: 10px 0px 0px 0px;
+    }
+
+    ul.pagination {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.pagination li {
+      display: inline;
+    }
+
+    ul.pagination li a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    ul.pagination li a.active {
+      background-color: #ffd103;
+      color: white;
+    }
+
+    ul.pagination li a:hover:not(.active) {
+      background-color: #ddd;
+    }
+  </style>
+  <body>
+    <div id="top" class="toppart">
+      <div id="topitem1" class="topitemone">系统演示</div>
+      <div id="topitem2" class="topitemtwo">供应链</div>
+      <div id="topitem3" class="topitemthree">子系统3</div>
+    </div>
+    <div id="down" class="leftright">
+      <div id="left" class="leftpart">
+        <div class="lefttext">侧边栏</div>
+        <ul class="leftmenu">
+          <li><a class="active" href="#">财务管理</a></li>
+          <li><a href="#">数据管理</a></li>
+        </ul>
+      </div>
+      <div id="right" class="rightpart">
+        <div id="dataFiltering" class="dataFilterbox">
+          <div class="text">数据筛选</div>
+          <div id="box1" class="floatleft">
+            <span>机构：</span>
+            <input type="text" class="mechanismbox" />
+          </div>
+          <div id="box2" class="floatleft">
+            <span>操作人：</span>
+            <input type="text" class="operatorbox" />
+          </div>
+          <div id="box3">
+            <button type="submit" title="搜索" class="subbtn">搜索</button>
+            <button type="reset" title="重置" class="resbtn">重置</button>
+          </div>
+        </div>
+
+        <div class="text">数据表格</div>
+        <div id="testTable">
+          <table class="tableborder">
+            <thead>
+              <tr class="thead1 tablebordersize">
+                <th>序号</th>
+                <th>编码</th>
+                <th>机构</th>
+                <th>操作人</th>
+                <th>操作时间</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tablebordersize">
+                <td>1</td>
+                <td>P001</td>
+                <td>西南配送中心</td>
+                <td>机器人001</td>
+                <td>2021年10月11日11:53:43</td>
+              </tr>
+              <tr class="tablebordersize">
+                <td>2</td>
+                <td>P002</td>
+                <td>西南配送中心</td>
+                <td>机器人002</td>
+                <td>2021年10月11日12:53:43</td>
+              </tr>
+              <tr class="tablebordersize">
+                <td>3</td>
+                <td>P002</td>
+                <td>西南配送中心</td>
+                <td>机器人003</td>
+                <td>2021年10月11日13:53:43</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="pages" class="pagestyle">
+          <ul class="pagination">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a class="active" href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">»</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
