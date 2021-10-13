@@ -5,89 +5,124 @@
   </head>
   <title>前端入门课程</title>
   <style type="text/css">
-    .a{
-      float:left;
+    .floatleft {
+      float: left;
     }
-    .subbtn{
-      background:#FFD103;
+    .subbtn {
+      height: 34px;
+      background: #ffd103;
       border: none;
       color: black;
-      padding: 4px 10px;
+      padding: 4px 14px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       cursor: pointer;
-      border-radius: 2px;
+      border-radius: 4px;
     }
-    table{
-      border-collapse:collapse;
+    .resbtn {
+      height: 34px;
+      background: #f0f0f0;
+      border: none;
+      color: black;
+      padding: 4px 14px;
+      cursor: pointer;
+      border-radius: 4px;
     }
-    table,td,th{
-      border:1px solid black;
+    .tableborder {
+      width: 100%;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
     }
-    .thead1{
-      background:#FFD103;
+    .tablebordersize td {
+      padding: 10px;
+      border: 1px solid black;
     }
-    .text{
-      font-weight:bold;
-      font-size:18px;
-      margin:0px 0px 10px 0px;
+    .tablebordersize th {
+      padding: 10px;
+      border: 1px solid black;
     }
-    ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-  .pagestyle{
-    float:right;
-  }
+    .thead1 {
+      background: #ffd103;
+    }
+    .text {
+      clear: both;
+      font-weight: bold;
+      font-size: 24px;
+      margin: 10px 0px 10px 0px;
+    }
+    .mechanismbox {
+      padding: 0px 0px 0px 12px;
+      border-color: #d9d9d9;
+      height: 30px;
+      margin: 0px 10px 0px 0px;
+      border-radius: 4px;
+    }
+    .operatorbox {
+      border-color: #d9d9d9;
+      height: 30px;
+      margin: 0px 10px 0px 0px;
+      border-radius: 4px;
+    }
 
-    ul.pagination li {display: inline;}
+    .pagestyle {
+      text-align: right;
+      margin: 10px 0px 0px 0px;
+    }
+
+    ul.pagination {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.pagination li {
+      display: inline;
+    }
 
     ul.pagination li a {
-        color: black;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        transition: background-color .3s;
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
 
     ul.pagination li a.active {
-        background-color: #FFD103;
-        color: white;
+      background-color: #ffd103;
+      color: white;
     }
 
-    ul.pagination li a:hover:not(.active) {background-color: #ddd;}
-    
+    ul.pagination li a:hover:not(.active) {
+      background-color: #ddd;
+    }
   </style>
+  <script src="./index.js"></script>
   <body>
     <img src="//s0.meituan.net/bs/fe-web-meituan/10afbf1/img/logo.png" />
     <h1>前端入门</h1>
     <div id="dataFiltering" class="dataFilterbox">
-      <div class="text">
-        数据筛选
-      </div>
-      <div id="box1" class="a">
+      <div class="text">数据筛选</div>
+      <div id="box1" class="floatleft">
         <span>机构：</span>
-        <input type="text" />&nbsp;&nbsp;
+        <input type="text" class="mechanismbox" />
       </div>
-      <div id="box2" class="a">
+      <div id="box2" class="floatleft">
         <span>操作人：</span>
-        <input type="text" />&nbsp;&nbsp;
+        <input type="text" class="operatorbox" />
       </div>
       <div id="box3">
         <button type="submit" title="搜索" class="subbtn">搜索</button>
         <button type="reset" title="重置" class="resbtn">重置</button>
       </div>
     </div>
-    <br/>
-    <div class="text">
-      数据表格
-    </div>
+
+    <div class="text">数据表格</div>
     <div id="testTable">
-      <table width="90%" align="center" class=table1>  
-        <thead >
-          <tr align="center" class="thead1" >  
+      <table class="tableborder">
+        <thead>
+          <tr class="thead1 tablebordersize">
             <th>序号</th>
             <th>编码</th>
             <th>机构</th>
@@ -96,21 +131,21 @@
           </tr>
         </thead>
         <tbody>
-          <tr align="center">
+          <tr class="tablebordersize">
             <td>1</td>
             <td>P001</td>
             <td>西南配送中心</td>
             <td>机器人001</td>
             <td>2021年10月11日11:53:43</td>
-          </tr>  
-          <tr align="center">
+          </tr>
+          <tr class="tablebordersize">
             <td>2</td>
             <td>P002</td>
             <td>西南配送中心</td>
             <td>机器人002</td>
             <td>2021年10月11日12:53:43</td>
           </tr>
-          <tr align="center">
+          <tr class="tablebordersize">
             <td>3</td>
             <td>P002</td>
             <td>西南配送中心</td>
@@ -118,9 +153,9 @@
             <td>2021年10月11日13:53:43</td>
           </tr>
         </tbody>
-      <table>
+      </table>
     </div>
-    <br/>
+
     <div id="pages" class="pagestyle">
       <ul class="pagination">
         <li><a href="#">«</a></li>
@@ -134,8 +169,5 @@
         <li><a href="#">»</a></li>
       </ul>
     </div>
-    <br/>
-
-
   </body>
 </html>
